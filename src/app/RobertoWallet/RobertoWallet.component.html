@@ -1,0 +1,40 @@
+<div>
+  <p>Saldo Total:</p>
+  BitCoin:{{ saldo }} <br />
+  <br />
+  <p>Real: {{ this.getPrice().bpi.BRL.rate }}</p>
+  <p>Dólar: {{ this.getPrice().bpi.USD.rate }}</p>
+  <p>Euro: {{ this.getEURPrice().bpi.EUR.rate }}</p>
+</div>
+
+<div>
+  <p>
+    <button
+      (click)="comprarBitcoin()"
+      style="background-color:
+    #e5811b;"
+      class="btn btn-dark"
+    >
+      Minerar
+    </button>
+  </p>
+  <p>
+    <button
+      (click)="venderBitcoin()"
+      style="background-color:
+    #66102e;"
+      class="btn btn-primary"
+    >
+      Vender
+    </button>
+  </p>
+  <p>
+    <button
+      (click)="update()"
+      style="background-color: #c11bcc"
+      class="btn btn-primary"
+    >
+      Atualizar Carteira
+    </button>
+  </p>
+</div>

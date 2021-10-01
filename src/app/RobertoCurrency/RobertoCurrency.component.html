@@ -1,0 +1,25 @@
+<div *ngIf="getPrice()">
+  <div *ngIf="getEURPrice()">
+    <h2>Horário atual:</h2>
+    <div class="mb-5">{{ this.getPrice().time.updated }}</div>
+
+    <table class="table table-striped text-center">
+      <thead class="thead-dark">
+        <tr>
+          <th>Real</th>
+          <th>Dólar</th>
+          <th>Euro</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="color:green;">BRL: {{ this.getPrice().bpi.BRL.rate }}</td>
+          <td style="color:green;">USD: {{ this.getPrice().bpi.USD.rate }}</td>
+          <td style="color:green;">
+            EUR: {{ this.getEURPrice().bpi.EUR.rate }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
